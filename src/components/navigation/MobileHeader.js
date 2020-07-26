@@ -33,7 +33,7 @@ function MobileHeader({handleDrawerToggle}) {
 
                 <Grid
                     spacing={2}
-                    xs={10}
+                    xs={1}
                     container={true}
                     justify="flex-start"
                     item={true}>
@@ -49,7 +49,9 @@ function MobileHeader({handleDrawerToggle}) {
                         </Link>
                     </Grid>
                 </Grid>
-
+                <Grid item={true} xs={10}>
+                    <p className="uppercase text text-align-center font-size-small font-weight-bold">The Pig Empire</p>
+                </Grid>
                 <Grid item={true} xs={1}>
                     <Menu className={classes.icon} onClick={handleClick}/>
                 </Grid>
