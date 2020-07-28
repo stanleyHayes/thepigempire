@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../../components/layout/Layout";
-import {Container, Grid, Button} from "@material-ui/core";
+import {Container, Grid, Button, Card, CardContent, Avatar} from "@material-ui/core";
 import Slider from "react-slick";
 import {ArrowForward} from "@material-ui/icons";
 import {Link} from "react-router-dom";
@@ -57,6 +57,7 @@ const HomePage = () => {
                     </div>
                 </Slider>
             </div>
+
             <section className="padding-vertical-huge">
                 <Container>
 
@@ -120,6 +121,113 @@ const HomePage = () => {
 
                         </Grid>
                     </div>
+                </Container>
+            </section>
+
+            <section className="padding-vertical-huge light-background">
+                <Container>
+
+                    <Grid container={true}>
+                        <Grid item={true} xs={12}>
+                            <p className="sub-header text uppercase font-weight-bold">Our Values</p>
+                        </Grid>
+                    </Grid>
+
+                    <Grid container={true} spacing={4}>
+                        <Grid item={true} xs={12} md={6}>
+                            <div className="shadow">
+                                <Card variant="outlined">
+                                    <CardContent>
+                                        <div className="text-align-center">
+                                            <img
+                                                className="rounded-image"
+                                                alt="Happy Logo"
+                                                width={70}
+                                                height={70}
+                                                src={`${process.env.PUBLIC_URL}/images/happy.svg`}
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="text-align-center text font-weight-bold">Lorem ipsum</p>
+                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </Grid>
+
+                        <Grid item={true} xs={12} md={6}>
+                            <div className="shadow">
+                                <Card variant="outlined">
+                                    <CardContent>
+                                        <div className="text-align-center">
+                                            <img
+                                                className="rounded-image"
+                                                alt="Happy Logo"
+                                                width={70}
+                                                height={70}
+                                                src={`${process.env.PUBLIC_URL}/images/happy.svg`}
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="text-align-center text font-weight-bold">Lorem ipsum</p>
+                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </Grid>
+
+                        <Grid item={true} xs={12} md={6}>
+                            <div className="shadow">
+                                <Card variant="outlined">
+                                    <CardContent>
+                                        <div className="text-align-center">
+                                            <img
+                                                className="rounded-image"
+                                                alt="Happy Logo"
+                                                width={70}
+                                                height={70}
+                                                src={`${process.env.PUBLIC_URL}/images/happy.svg`}
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="text-align-center text font-weight-bold">Lorem ipsum</p>
+                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </Grid>
+
+                        <Grid item={true} xs={12} md={6}>
+                            <div className="shadow">
+                                <Card variant="outlined">
+                                    <CardContent>
+                                        <div className="text-align-center">
+                                            <img
+                                                className="rounded-image"
+                                                alt="Happy Logo"
+                                                width={70}
+                                                height={70}
+                                                src={`${process.env.PUBLIC_URL}/images/happy.svg`}
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="text-align-center text font-weight-bold">Lorem ipsum</p>
+                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </section>
+
+            <section className="padding-vertical-huge">
+                <Container>
+
                 </Container>
             </section>
         </Layout>
