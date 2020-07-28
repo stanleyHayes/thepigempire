@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'Poppins', sans-serif;
+  font-family:'Quicksand',sans-serif;
 }
 
 .nav-link {
@@ -67,10 +67,6 @@ html, body {
   min-height: 60vh;
   display: flex;
   align-items: center;
-}
-
-.text {
-  color: #333333;
 }
 
 .title {
@@ -348,34 +344,6 @@ html, body {
   }
 }
 
-.responsive-title {
-  font-size: 58px;
-  font-weight: 900;
-}
-
-@media only screen and (max-width: 600px) {
-  .responsive-title {
-    font-size: 32px;
-    font-weight: 900;
-  }
-}
-
-.responsive-text {
-  font-size: 52px;
-}
-
-@media only screen and (max-width: 900px) {
-  .responsive-text {
-    font-size: 32px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .responsive-text {
-    font-size: 16px;
-  }
-}
-
 .center-align {
   text-align: center;
 }
@@ -492,4 +460,36 @@ html, body {
 
 .font-size-huge{
   font-size: 72px;
+}
+
+.responsive-height{
+  height: 90vh;
+}
+
+@media screen and (max-width: 1200px){
+  .responsive-height{
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .responsive-height{
+    height: 70vh;
+  }
+}
+
+
+.text{
+  color: #333333;
+}
+
+.shadow{
+  transition: all ease-in 500ms;
+}
+.shadow:hover{
+  box-shadow: 10px 15px 5px #dddddd;
+}
+
+.font-weight-500{
+  font-weight: 500;
 }
