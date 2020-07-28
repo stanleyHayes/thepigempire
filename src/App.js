@@ -36,6 +36,10 @@ function App() {
             <NewsPage />
           </Route>
 
+          <Route path="/news/:slug" exact={true}>
+            <NewsDetailPage />
+          </Route>
+
           <Route path="/careers/:career" exact={true}>
             <CareerDetailPage />
           </Route>

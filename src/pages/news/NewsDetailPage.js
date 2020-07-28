@@ -16,7 +16,6 @@ function NewsDetailPage() {
 
     const {image, summary, dateCreated, author, title, detail} = newsItem;
 
-
     return (
         <Layout>
             <div className="padding-vertical-huge">

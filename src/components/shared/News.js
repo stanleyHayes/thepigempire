@@ -38,7 +38,8 @@ function News({newsItem}) {
                 component="img"
                 src={image}/>
             <CardContent>
-                <p><span className="font-size-small font-weight-bold">{author}</span> <span
+                <p>
+                    <span className="font-size-small font-weight-bold">{author}</span> <span
                     className="separator">|</span> <span
                     className="font-size-small font-weight-bold">{new Date(dateCreated).toDateString()}</span></p>
                 <p className="font-weight-bold font-size-medium grey-text uppercase">{title}</p>
