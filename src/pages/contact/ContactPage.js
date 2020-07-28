@@ -330,7 +330,7 @@ function ContactPage() {
                                                             e.preventDefault();
                                                             setSelectedOffice(office);
                                                         }}>
-                                                            <img width="30" height="30" src={`${process.env.PUBLIC_URL}/images/location.svg`} alt="Location logo" />
+                                                            <img width="20" height="20" src={`${process.env.PUBLIC_URL}/images/location.svg`} alt="Location logo" />
                                                         </div>
                                                     </Marker>
                                                 )
