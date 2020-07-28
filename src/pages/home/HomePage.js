@@ -1,12 +1,13 @@
 import React from "react";
 import Layout from "../../components/layout/Layout";
-import {Container, Grid, Button, Card, CardContent, Avatar} from "@material-ui/core";
+import {Container, Grid, Button, Card, CardContent} from "@material-ui/core";
 import Slider from "react-slick";
 import {ArrowForward} from "@material-ui/icons";
 import {Link} from "react-router-dom";
 import {makeStyles} from "@material-ui/styles";
 import Facility from "../../components/shared/Facility";
 import "../../App.css";
+import ContactForm from "../../components/shared/ContactForm";
 
 const HomePage = () => {
 
@@ -227,7 +228,26 @@ const HomePage = () => {
 
             <section className="padding-vertical-huge">
                 <Container>
+                    <Grid container={true}>
+                        <Grid item={true} xs={12}>
+                            <p className="sub-header text uppercase font-weight-bold">Contact Us</p>
+                        </Grid>
+                    </Grid>
+                    <Grid container={true} justify="center" spacing={4}>
 
+                        <Grid item={true} xs={12} md={6}>
+                            <div className="center-vertical">
+                                <div>
+                                    <p className="responsive-text text-align-center text font-weight-bold">Lorem Ipsum Dolor</p>
+                                    <p className="text-align-center text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                </div>
+                            </div>
+                        </Grid>
+
+                        <Grid item={true} xs={12} md={6}>
+                            <ContactForm />
+                        </Grid>
+                    </Grid>
                 </Container>
             </section>
         </Layout>
