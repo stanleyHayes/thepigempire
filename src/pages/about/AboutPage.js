@@ -341,7 +341,7 @@ function AboutPage() {
                     </Container>
                 </section>
 
-                <section className="section light-background">
+                <section className="section light-background padding-vertical-huge">
                     <Container>
                         <Grid container={true} spacing={3}>
                             <Grid item={true} xs={12}>

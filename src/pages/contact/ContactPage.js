@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import {Container, Grid, Card, CardContent, CardMedia} from "@material-ui/core";
+import ReactMapGL, {Marker, Popup} from "react-map-gl";
 import Layout from "../../components/layout/Layout";
 import {makeStyles} from "@material-ui/styles";
 import "../../App.css";
 import ContactForm from "../../components/shared/ContactForm";
-
 function ContactPage() {
     const useStyles = makeStyles(theme => {
         return {
@@ -21,13 +21,48 @@ function ContactPage() {
             image: {
                 width: "100%",
                 height: 250
+            },
+            mapContainer: {
+                width: "100%",
+                height: '100%'
+            },
+            divContainer: {
+                backgroundColor: "white",
+                borderRadius: 24,
+                padding: 16
             }
-
         }
-    })
+    });
 
     const classes = useStyles();
 
+    const [selectedOffice, setSelectedOffice] = useState(null);
+
+    const [viewPort, setViewPort] = useState({
+        latitude: 7.9527706,
+        longitude: -1.0307118,
+        zoom: 5,
+        width: '100%',
+        height: '100%'
+    });
+
+    const offices = [
+        {
+            phone: "+233270048319",
+            coordinates: [5.1054, -1.2466],
+            address: "Cape Coast"
+        },
+        {
+            phone: "+233555180048",
+            coordinates: [5.55602, -0.1969],
+            address: "Cape Coast"
+        },
+        {
+            phone: "+233502595892",
+            coordinates: [6.68848, -1.62443],
+            address: "Cape Coast"
+        }
+    ]
 
     return (
         <Layout>
@@ -41,27 +76,27 @@ function ContactPage() {
 
                             <Grid item={true} xs={2} md={1}>
                                 <a href="https://" target="_blank" rel="noreferrer noopener">
-                                    <img width={50} height={50}
+                                    <img width={30} height={30}
                                          src={`${process.env.PUBLIC_URL}/images/linkedin.svg`}
                                          alt="Linkedin logo"/>
                                 </a>
                             </Grid>
                             <Grid item={true} xs={2} md={1}>
                                 <a href="https://" target="_blank" rel="noreferrer noopener">
-                                    <img width={50} height={50}
+                                    <img width={30} height={30}
                                          src={`${process.env.PUBLIC_URL}/images/facebook.svg`}
                                          alt="Facebook logo"/>
                                 </a>
                             </Grid>
                             <Grid item={true} xs={2} md={1}>
                                 <a href="https://" target="_blank" rel="noreferrer noopener">
-                                    <img width={50} height={50} src={`${process.env.PUBLIC_URL}/images/twitter.svg`}
+                                    <img width={30} height={30} src={`${process.env.PUBLIC_URL}/images/twitter.svg`}
                                          alt="Twitter logo"/>
                                 </a>
                             </Grid>
                             <Grid item={true} xs={2} md={1}>
                                 <a href="https://" target="_blank" rel="noreferrer noopener">
-                                    <img width={50} height={50}
+                                    <img width={30} height={30}
                                          src={`${process.env.PUBLIC_URL}/images/instagram.svg`}
                                          alt="Instagram logo"/>
                                 </a>
@@ -281,9 +316,41 @@ function ContactPage() {
                         <Grid container={true} spacing={5} justify="center">
 
                             <Grid item={true} xs={12} md={6}>
-                                <div>
-                                    <p className="text-align-center uppercase font-weight-bold font-size-large">Insert
-                                        map here</p>
+                                <div className={classes.mapContainer}>
+                                    <ReactMapGL
+                                        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
+                                        mapStyle="mapbox://styles/mapbox/streets-v11"
+                                        onViewportChange={viewPort => setViewPort(viewPort)}
+                                        {...viewPort}>
+                                        {
+                                            offices.map((office, index) => {
+                                                return (
+                                                    <Marker key={index} latitude={office.coordinates[0]} longitude={office.coordinates[1]}>
+                                                        <div onClick={(e) => {
+                                                            e.preventDefault();
+                                                            setSelectedOffice(office);
+                                                        }}>
+                                                            <img width="30" height="30" src={`${process.env.PUBLIC_URL}/images/location.svg`} alt="Location logo" />
+                                                        </div>
+                                                    </Marker>
+                                                )
+                                            })
+                                        }
+
+                                        {selectedOffice ? (
+                                            <Popup
+                                                onClose={() => {
+                                                    setSelectedOffice(null);
+                                                }}
+                                                latitude={selectedOffice.coordinates[0]} longitude={selectedOffice.coordinates[1]}>
+                                                <div>
+                                                    <p className="text font-size-small font-weight-bold text-align-center">{selectedOffice.address}</p>
+                                                    <p className="text font-size-small font-weight-bold text-align-center">{selectedOffice.phone}</p>
+                                                </div>
+                                            </Popup>
+                                        ) : null}
+
+                                    </ReactMapGL>
                                 </div>
                             </Grid>
                             <Grid item={true} xs={12} md={6}>
