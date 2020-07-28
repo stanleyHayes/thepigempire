@@ -359,8 +359,8 @@ html, body {
 }
 
 @media screen and (max-width: 600px) {
-  .sub-header, .profile {
-    font-size: 14px;
+  .sub-header {
+    font-size: 18px;
   }
 }
 
@@ -427,9 +427,8 @@ html, body {
 }
 
 .profile {
-  line-height: 2;
-  font-size: 20px;
-  word-spacing: 4px;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 
@@ -463,18 +462,18 @@ html, body {
 }
 
 .responsive-height{
-  height: 90vh;
+  height: 80vh;
 }
 
 @media screen and (max-width: 1200px){
   .responsive-height{
-    height: 80vh;
+    height: 70vh;
   }
 }
 
 @media screen and (max-width: 700px){
   .responsive-height{
-    height: 70vh;
+    height: 60vh;
   }
 }
 
@@ -487,7 +486,7 @@ html, body {
   transition: all ease-in 500ms;
 }
 .shadow:hover{
-  box-shadow: 10px 15px 5px #dddddd;
+  box-shadow: 5px 5px 3px #dddddd;
 }
 
 .font-weight-500{
@@ -499,7 +498,7 @@ html, body {
 }
 
 .responsive-text{
-  font-size: 64px;
+  font-size: 48px;
 }
 
 @media screen and (max-width: 1200px) {

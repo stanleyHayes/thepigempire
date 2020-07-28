@@ -59,9 +59,99 @@ const HomePage = () => {
                 </Slider>
             </div>
 
+            <section className="light-background section padding-vertical-huge">
+                <Container>
+                    <Grid container={true} spacing={3}>
+                        <Grid item={true} xs={12}>
+                            <p className="uppercase margin-vertical-large sub-header">services</p>
+                        </Grid>
+
+                        <Grid item={true} xs={12} md={6} lg={4}>
+                            <div className="shadow">
+                                <Card className={classes.card} raised={true} elevation={0} variant="outlined">
+                                    <CardContent>
+                                        <div>
+                                            <div className="center-align">
+                                                <img
+                                                    height="70"
+                                                    width="70"
+                                                    className=""
+                                                    src={`${process.env.PUBLIC_URL}/images/mission.svg`}
+                                                    alt="Mission logo"/>
+                                            </div>
+                                            <p className="font-weight-bold title center-align uppercase grey-text">Lorem Ipsum</p>
+                                            <p className="summary center-align">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat
+                                            </p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </Grid>
+
+
+                        <Grid item={true} xs={12} md={6} lg={4}>
+                            <div className="shadow">
+                                <Card className={classes.card} raised={true} elevation={0} variant="outlined">
+                                    <CardContent>
+                                        <div>
+                                            <div className="center-align">
+                                                <img
+                                                    height="70"
+                                                    width="70"
+                                                    className=""
+                                                    src={`${process.env.PUBLIC_URL}/images/vision.svg`}
+                                                    alt="Mission logo"/>
+                                            </div>
+                                            <p className="font-weight-bold title center-align uppercase grey-text">Lorem Ipsum</p>
+                                            <p className="summary center-align">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat
+                                            </p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </Grid>
+
+
+                        <Grid item={true} xs={12} md={6} lg={4}>
+                            <div className="shadow">
+                                <Card className={classes.card} raised={true} elevation={4} variant="outlined">
+                                    <CardContent>
+                                        <div>
+                                            <div className="center-align">
+                                                <img
+                                                    height="70"
+                                                    width="70"
+                                                    className=""
+                                                    src={`${process.env.PUBLIC_URL}/images/vision.svg`}
+                                                    alt="Mission logo"/>
+                                            </div>
+                                            <p className="title center-align uppercase font-weight-bold grey-text">Lorem Ipsum</p>
+                                            <p className="summary center-align">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo consequat
+                                            </p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </Grid>
+
+                    </Grid>
+                </Container>
+            </section>
+
             <section className="padding-vertical-huge">
                 <Container>
-
                     <Grid container={true}>
                         <Grid item={true} xs={12}>
                             <p className="sub-header text uppercase font-weight-bold">Our Facilities</p>
@@ -150,7 +240,9 @@ const HomePage = () => {
                                         </div>
                                         <div>
                                             <p className="text-align-center text font-weight-bold">Lorem ipsum</p>
-                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit
+                                                amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                                labore et dolore magna aliqua.</p>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -172,7 +264,9 @@ const HomePage = () => {
                                         </div>
                                         <div>
                                             <p className="text-align-center text font-weight-bold">Lorem ipsum</p>
-                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit
+                                                amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                                labore et dolore magna aliqua.</p>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -194,7 +288,9 @@ const HomePage = () => {
                                         </div>
                                         <div>
                                             <p className="text-align-center text font-weight-bold">Lorem ipsum</p>
-                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit
+                                                amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                                labore et dolore magna aliqua.</p>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -216,7 +312,9 @@ const HomePage = () => {
                                         </div>
                                         <div>
                                             <p className="text-align-center text font-weight-bold">Lorem ipsum</p>
-                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <p className="text-align-center text font-weight-500">Lorem ipsum dolor sit
+                                                amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                                labore et dolore magna aliqua.</p>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -238,10 +336,10 @@ const HomePage = () => {
                         <Grid item={true} xs={12} md={6}>
                             <div className="center-vertical">
                                 <div>
-                                    <p className="responsive-text text-align-center text font-weight-bold">
+                                    <p className="responsive-text text-align-center text font-weight-500">
                                         Lorem Ipsum Dolor
                                     </p>
-                                    <p className="text-align-center text font-size-medium font-weight-500">
+                                    <p className="text-align-center text font-size-large font-weight-500">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                     </p>
                                 </div>
@@ -249,7 +347,7 @@ const HomePage = () => {
                         </Grid>
 
                         <Grid item={true} xs={12} md={6}>
-                            <ContactForm />
+                            <ContactForm/>
                         </Grid>
                     </Grid>
                 </Container>
