@@ -316,7 +316,7 @@ function ContactPage() {
                         <Grid container={true} spacing={5} justify="center">
 
                             <Grid item={true} xs={12} md={6}>
-                                <div className={classes.mapContainer}>
+                                <div className="map-container">
                                     <ReactMapGL
                                         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
                                         mapStyle="mapbox://styles/mapbox/streets-v11"
@@ -358,6 +358,45 @@ function ContactPage() {
                             </Grid>
                         </Grid>
                     </Container>
+                </section>
+
+                <section>
+                    <div className="">
+                        <ReactMapGL
+                            mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
+                            mapStyle="mapbox://styles/mapbox/streets-v11"
+                            onViewportChange={viewPort => setViewPort(viewPort)}
+                            {...viewPort}>
+                            {
+                                offices.map((office, index) => {
+                                    return (
+                                        <Marker key={index} latitude={office.coordinates[0]} longitude={office.coordinates[1]}>
+                                            <div onClick={(e) => {
+                                                e.preventDefault();
+                                                setSelectedOffice(office);
+                                            }}>
+                                                <img width="20" height="20" src={`${process.env.PUBLIC_URL}/images/location.svg`} alt="Location logo" />
+                                            </div>
+                                        </Marker>
+                                    )
+                                })
+                            }
+
+                            {selectedOffice ? (
+                                <Popup
+                                    onClose={() => {
+                                        setSelectedOffice(null);
+                                    }}
+                                    latitude={selectedOffice.coordinates[0]} longitude={selectedOffice.coordinates[1]}>
+                                    <div>
+                                        <p className="text font-size-small font-weight-bold text-align-center">{selectedOffice.address}</p>
+                                        <p className="text font-size-small font-weight-bold text-align-center">{selectedOffice.phone}</p>
+                                    </div>
+                                </Popup>
+                            ) : null}
+
+                        </ReactMapGL>
+                    </div>
                 </section>
             </div>
         </Layout>
