@@ -238,8 +238,12 @@ const HomePage = () => {
                         <Grid item={true} xs={12} md={6}>
                             <div className="center-vertical">
                                 <div>
-                                    <p className="responsive-text text-align-center text font-weight-bold">Lorem Ipsum Dolor</p>
-                                    <p className="text-align-center text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    <p className="responsive-text text-align-center text font-weight-bold">
+                                        Lorem Ipsum Dolor
+                                    </p>
+                                    <p className="text-align-center text font-size-medium font-weight-500">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                    </p>
                                 </div>
                             </div>
                         </Grid>

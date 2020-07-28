@@ -21,7 +21,7 @@ function DrawerContent({handleDrawerClose}) {
             link: {
                 color: "#777777",
                 textDecoration: "none",
-                fontFamily: 'Poppins'
+                fontFamily: 'Quicksand'
             },
             avatar: {
                 width: 150,
