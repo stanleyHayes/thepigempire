@@ -352,6 +352,100 @@ const HomePage = () => {
                     </Grid>
                 </Container>
             </section>
+
+            <section className="section light-background">
+                <Container>
+                    <Grid container={true} spacing={3}>
+                        <Grid item={true} xs={12}>
+                            <p className="uppercase margin-vertical-large sub-header">
+                                Partners
+                            </p>
+                        </Grid>
+                        <Grid item={true} xs={12} md={3}>
+                            <div className="shadow">
+                                <Card raised={false} elevation={0} variant="outlined">
+                                    <CardContent>
+                                        <div>
+                                            <div className="center-align">
+                                                <img
+                                                    height="70"
+                                                    width="70"
+                                                    className="rounded-image"
+                                                    src={`${process.env.PUBLIC_URL}/images/happy.svg`}
+                                                    alt="People logo"/>
+                                            </div>
+                                            <p className="font-size-medium font-weight-bold center-align uppercase grey-text">Our
+                                                People</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </Grid>
+
+                        <Grid item={true} xs={12} md={3}>
+                            <div className="shadow">
+                                <Card raised={false} elevation={0} variant="outlined">
+                                    <CardContent>
+                                        <div>
+                                            <div className="center-align">
+                                                <img
+                                                    height="70"
+                                                    width="70"
+                                                    className="rounded-image"
+                                                    src={`${process.env.PUBLIC_URL}/images/behavior.svg`}
+                                                    alt="Decision making logo"/>
+                                            </div>
+                                            <p className="font-size-medium font-weight-bold center-align uppercase grey-text">Our
+                                                Conduct</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </Grid>
+                        <Grid item={true} xs={12} md={3}>
+                            <div className="shadow">
+                                <Card raised={false} elevation={0} variant="outlined">
+                                    <CardContent>
+                                        <div>
+                                            <div className="center-align">
+                                                <img
+                                                    height="70"
+                                                    width="70"
+                                                    className="rounded-image"
+                                                    src={`${process.env.PUBLIC_URL}/images/policy.svg`}
+                                                    alt="Policy logo"/>
+                                            </div>
+                                            <p className="font-size-medium font-weight-bold center-align uppercase grey-text">Our
+                                                Policies</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </Grid>
+                        <Grid item={true} xs={12} md={3}>
+                            <div className="shadow">
+                                <Card raised={false} elevation={0} variant="outlined">
+                                    <CardContent>
+                                        <div>
+                                            <div className="center-align">
+                                                <img
+                                                    height="70"
+                                                    width="70"
+                                                    className="rounded-image"
+                                                    src={`${process.env.PUBLIC_URL}/images/decision-making.svg`}
+                                                    alt="Mission logo"/>
+                                            </div>
+                                            <p className="font-size-medium center-align uppercase grey-text font-weight-bold">Our
+                                                Innovative
+                                                approach</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </section>
         </Layout>
     )
 }
